@@ -17,6 +17,10 @@ requires "jsony"
 task buildClient, "Builds the client.js":
   exec "nim js -d:danger -o:example/client/client.js example/client/client.nim"
 
-task runAll, "Builds client and starts server":
+task runTodo, "Builds client and starts server":
   exec "nim js -d:danger -o:example/client/client.js example/client/client.nim"
-  exec "nim r --mm:orc example/server.nim"
+  exec "nim r --mm:orc example/serverTodo.nim"
+
+task runChat, "Builds client and starts server":
+  exec "nim js -d:danger -o:example/client/client.js example/client/client.nim"
+  exec "nim r --mm:orc example/serverChat.nim"

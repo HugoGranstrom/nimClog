@@ -105,6 +105,9 @@ template bindVariableToValue*(variable: untyped, obj: ClogObject, conv: untyped)
         variable = conv(event.checked)
   )
 
+template executeJs*(code: string) =
+  await ws.send(toJson(DiffObject(kind: executeJavascript, jsCode: code)))
+
 proc idFromEventString*(eventString: string): string =
   eventString.split(":")[1]
 

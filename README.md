@@ -8,9 +8,9 @@ This is a proof of concept of this idea but it has many rough edges and is hacky
 develop a proper HTML-over-Websocket library in Nim. I have neither the time nor knowledge to succeed with that.  
 
 ## Example
-In `example/` there is an example with a TODO (how imaginative) and a Date picker. You can run them by cloning the repo and installing the dependencies.
+In `example/` there are examples with a TODO (how imaginative) and a Date picker and a second one with a simple chat app. You can run them by cloning the repo and installing the dependencies.
 Then you have to start a http server in `example/client` for example using `nimhttpd example/client`. After that you can open a second terminal window and run
-`nimble runAll` to build the client and start the Websocket server. Going to [localhost:1337](localhost:1337) should show you the demos then. 
+`nimble runTodo` or `nimble runChat` to build the client and start the Websocket server. Going to [localhost:1337](localhost:1337) should show you the chosen demo then. 
 
 ## Usage
 The easiest way to start at the moment is to clone the repo and modify `example/server.nim`, removing all content inside `startNimClog`.
